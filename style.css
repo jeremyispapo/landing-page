@@ -17,16 +17,19 @@ body {
     background-color: #674bb2;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr 5rem;
+    margin: 0 auto;
 }
 
 header {
     display: flex;
-    padding-top: 5rem;
-    margin-bottom: 5.59rem;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 header figure {
-    width: 23rem;
+    width: 20rem;
     text-align: left;
 }
 
@@ -38,17 +41,12 @@ figure img {
 main {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 1fr 57rem;
+    grid-template-columns:minmax(40rem,1fr) minmax(30rem, 60rem)
 }
 
-.image-section {
-    max-width: 90rem;
-    width: 100%;
-    min-width:15rem;
-}
 
 .description-section {
-    padding: 0 5rem;
+    padding: 0 0 0 5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -87,4 +85,46 @@ main {
     /* display: block; */
     width: 4rem;
     margin: 0 2rem;
+}
+
+@media screen and (max-width:768px){
+    
+    html {
+        margin: 0;
+    }
+
+    header {
+        padding: 0 0 0 3rem;
+    }
+    
+    main {
+        /* background: #000; */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .image-section figure {
+        padding: 0 3rem;
+    }
+
+    .description-section {
+        padding: 0 5rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .description-section button {
+        align-self: center;
+        padding: 1.8rem 7rem;
+    }
+
+    .social {
+        text-align: center;
+    }
+
+    .social a img {
+        width: 4.5rem;
+        margin-bottom: 4rem;
+
+    }
 }
