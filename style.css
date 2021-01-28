@@ -70,8 +70,11 @@ main {
     outline: none;
     border: none;
     box-shadow: 0px 0px 10px rgba(59, 59, 59, 0.486);
-    color: #9b91b8;
+    color: #674bb2;
     font-family: 'Open Sans';
+    font-weight: 700;
+    background: #fff;
+    cursor: pointer;
 }
 
 footer {
